@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "./Card";
 
 const NewPersonForm = (props) => {
   const [username, setUsername] = useState("");
@@ -20,7 +21,7 @@ const NewPersonForm = (props) => {
   };
 
   return (
-    <div>
+    <Card>
       <form onSubmit={submitButtonHnadler}>
         <label>Username:</label>
         <input
@@ -30,6 +31,8 @@ const NewPersonForm = (props) => {
           value={username}
           onChange={usernameOnChangeHangler}
         ></input>
+        {"   "}
+        || {"   "}
         <label>Age:</label>
         <input
           type='text'
@@ -40,7 +43,7 @@ const NewPersonForm = (props) => {
         ></input>
         <button type='subnit'>Save Person</button>
       </form>
-    </div>
+    </Card>
   );
 };
 

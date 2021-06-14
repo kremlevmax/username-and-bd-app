@@ -1,6 +1,21 @@
 import React from "react";
-const ErrorMeassage = (props) => {
-  console.log("123");
-  return <div>222222</div>;
+import Card from "./Card";
+const ErrorMessage = (props) => {
+  const submitButtonHandler = (event) => {
+    event.preventDefault();
+    props.onSubmit();
+  };
+  return (
+    <Card>
+      <div>
+        <b>{props.message}</b>
+      </div>
+      <div>
+        <button type='submit' onClick={submitButtonHandler}>
+          Ok
+        </button>
+      </div>
+    </Card>
+  );
 };
-export default ErrorMeassage;
+export default ErrorMessage;

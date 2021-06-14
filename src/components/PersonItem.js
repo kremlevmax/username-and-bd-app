@@ -1,12 +1,11 @@
 import React from "react";
+import Card from "./Card";
 
 const PersonItem = (props) => {
   return (
-    <div>
-      <div>{props.name}</div>
-      <div>{props.age}</div>
-      <div>{props.check}</div>
-    </div>
+    <Card>
+      Name: {props.name} | Age: {props.age}
+    </Card>
   );
 };
 
